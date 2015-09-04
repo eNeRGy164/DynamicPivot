@@ -20,7 +20,6 @@
                         <Setter Target="Icon.(RelativePanel.AlignHorizontalCenterWithPanel)" Value="True" />
                         <Setter Target="LabelText.(RelativePanel.Below)" Value="Icon" />
                         <Setter Target="LabelText.(RelativePanel.AlignHorizontalCenterWith)" Value="Icon" />
-                        <Setter Target="RelativePanel.Width" Value="68"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Wide">
