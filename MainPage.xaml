@@ -96,24 +96,24 @@
                                         </Storyboard>
                                     </VisualState>
                                 </VisualStateGroup>
-<VisualStateGroup>
-    <VisualState x:Name="Narrow">
-        <VisualState.StateTriggers>
-            <AdaptiveTrigger MinWindowWidth="0" />
-        </VisualState.StateTriggers>
-        <VisualState.Setters>
-            <Setter Target="HeaderClipper.HorizontalContentAlignment" Value="Center" />
-        </VisualState.Setters>
-    </VisualState>
-    <VisualState x:Name="Wide">
-        <VisualState.StateTriggers>
-            <AdaptiveTrigger MinWindowWidth="500" />
-        </VisualState.StateTriggers>
-        <VisualState.Setters>
-            <Setter Target="HeaderClipper.HorizontalContentAlignment" Value="Stretch" />
-        </VisualState.Setters>
-    </VisualState>
-</VisualStateGroup>
+                                <VisualStateGroup>
+                                    <VisualState x:Name="Narrow">
+                                        <VisualState.StateTriggers>
+                                            <AdaptiveTrigger MinWindowWidth="0" />
+                                        </VisualState.StateTriggers>
+                                        <VisualState.Setters>
+                                            <Setter Target="HeaderClipper.HorizontalContentAlignment" Value="Center" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Wide">
+                                        <VisualState.StateTriggers>
+                                            <AdaptiveTrigger MinWindowWidth="500" />
+                                        </VisualState.StateTriggers>
+                                        <VisualState.Setters>
+                                            <Setter Target="HeaderClipper.HorizontalContentAlignment" Value="Stretch" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
                             <ContentControl x:Name="TitleContentControl" ContentTemplate="{TemplateBinding TitleTemplate}" Content="{TemplateBinding Title}" IsTabStop="False" Margin="{StaticResource PivotPortraitThemePadding}" Style="{StaticResource TitleContentControlStyle}" Visibility="Collapsed"/>
                             <Grid Grid.Row="1">
@@ -194,6 +194,7 @@
                                             <Grid.RenderTransform>
                                                 <CompositeTransform x:Name="PivotLayoutElementTranslateTransform"/>
                                             </Grid.RenderTransform>
+                                            <Border Background="#FF34323F" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                             <ContentPresenter x:Name="LeftHeaderPresenter" ContentTemplate="{TemplateBinding LeftHeaderTemplate}" Content="{TemplateBinding LeftHeader}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                             <ContentControl x:Name="HeaderClipper" Grid.Column="1" HorizontalContentAlignment="Stretch" UseSystemFocusVisuals="True">
                                                 <ContentControl.Clip>
@@ -247,6 +248,7 @@
                     <Setter Property="Height" Value="Auto" />
                     <Setter Property="VerticalContentAlignment" Value="Center" />
                     <Setter Property="IsTabStop" Value="False" />
+                    <Setter Property="RequestedTheme" Value="Dark" />
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="PivotHeaderItem">
@@ -302,7 +304,7 @@
                                                     </ObjectAnimationUsingKeyFrames>
                                                     <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Grid"
                                                                        Storyboard.TargetProperty="Background" >
-                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightTransparentBrush}" />
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="#FF42424C" />
                                                     </ObjectAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
